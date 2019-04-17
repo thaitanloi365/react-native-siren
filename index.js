@@ -38,7 +38,7 @@ const performCheck = () => {
       // updateIsAvailable = latestInfo.version !== DeviceInfo.getVersion();
 
       const result = compareVersions(currentAppVersion, appStoreVersion);
-      updateIsAvailable = result === 1;
+      updateIsAvailable = result === -1;
     }
 
     return { updateIsAvailable, ...latestInfo };
